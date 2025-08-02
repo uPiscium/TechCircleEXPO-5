@@ -29,10 +29,10 @@ jobs:
         run: npm i -g @antfu/ni
 
       - name: Install dependencies
-        run: npm --prefix ./TechCircleEXPO-5 install ./TechCircleEXPO-5
+        run: nci
 
       - name: Build
-        run: npm run build --prefix TechCircleEXPO-5
+        run: nr build --base /${{github.event.repository.name}}/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
